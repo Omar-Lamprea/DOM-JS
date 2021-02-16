@@ -4,9 +4,78 @@ export default function dijitalWatch(){
   d.addEventListener('click', (e)=>{
     // console.log(e)
     if(e.target.matches('#startClock')){
+      const btnStar = d.getElementById('startClock')
+      btnStar.disabled = true
+      function startTime(){
+        const today = new Date(),
+        hour = today.getHours(),
+        minutes = today.getMinutes(),
+        seconds = today.getSeconds()
+        d.getElementById('clock').innerHTML = `${hour}: ${minutes}: ${seconds}`
+      }
+      startTime()
+      const checkTime = setInterval(() => {
+        startTime()
+      }, 1000);
+
+
+      const stopClock = d.getElementById('stopClock')
+      stopClock.addEventListener('click', (e)=>{
+        btnStar.disabled = false
+        clearInterval(checkTime)
+        d.getElementById('clock').innerHTML = ``
+      })
+    }
+
+    if(e.target.matches('#startAlarm')){
+      d.querySelector('audio').play()
+      d.querySelector('#startAlarm').disabled = true
+
+      const stopAlarm = d.getElementById('stopAlarm')
+      stopAlarm.addEventListener('click',(e)=>{
+      d.querySelector('audio').pause()
+      d.querySelector('#startAlarm').disabled = false
+      })
     }
   })
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function startTime() {

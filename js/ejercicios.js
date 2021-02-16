@@ -35,6 +35,5 @@ d.addEventListener('DOMContentLoaded',(e)=>{
   
   
   // Exercise 2: clock, alarm
-  // console.log(e)
   dijitalWatch()
 })
