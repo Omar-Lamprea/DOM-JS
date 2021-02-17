@@ -1,17 +1,16 @@
-export default function dijitalWatch(){
+export default function dijitalClock(){
   const d = document;
 
   d.addEventListener('click', (e)=>{
-    // console.log(e)
     if(e.target.matches('#startClock')){
       const btnStar = d.getElementById('startClock')
       btnStar.disabled = true
       function startTime(){
-        const today = new Date(),
-        hour = today.getHours(),
-        minutes = today.getMinutes(),
-        seconds = today.getSeconds()
-        d.getElementById('clock').innerHTML = `${hour}: ${minutes}: ${seconds}`
+        const today = new Date().toLocaleTimeString();
+        // hour = today.getHours(),
+        // minutes = today.getMinutes(),
+        // seconds = today.getSeconds()
+        d.getElementById('clock').innerHTML = `<h3>${today}</h3`
       }
       startTime()
       const checkTime = setInterval(() => {
@@ -23,18 +22,25 @@ export default function dijitalWatch(){
       stopClock.addEventListener('click', (e)=>{
         btnStar.disabled = false
         clearInterval(checkTime)
-        d.getElementById('clock').innerHTML = ``
+        d.getElementById('clock').innerHTML = null
       })
     }
 
     if(e.target.matches('#startAlarm')){
-      d.querySelector('audio').play()
+      const $audioAlarm = d.createElement('audio')
+      const sound = 'Assets/alarmSound.mp4'
+      $audioAlarm.src = sound;
+      $audioAlarm.play()
+      // d.querySelector('audio').play()
       d.querySelector('#startAlarm').disabled = true
 
       const stopAlarm = d.getElementById('stopAlarm')
       stopAlarm.addEventListener('click',(e)=>{
-      d.querySelector('audio').pause()
-      d.querySelector('#startAlarm').disabled = false
+        $audioAlarm.pause()
+        $audioAlarm.currentTime = 0
+        // d.querySelector('audio').pause()
+        // d.querySelector('audio').currentTime = 0
+        d.querySelector('#startAlarm').disabled = false
       })
     }
   })

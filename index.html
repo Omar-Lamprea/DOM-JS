@@ -15,14 +15,15 @@
       <h1>Ejercicios del DOM</h1>
     </header>
     <section class="section" id="section-1">
-        <h2>Sección 1</h2>
         <h1>Reloj digital y Alarma</h1>
         <div id="clock" class="clock"></div>
-        <button type="button" id="startClock"> Iniciar Reloj</button>
-        <button type="button" id="stopClock"> Detener Reloj</button>
-        <button type="button" id="startAlarm"> Iniciar alarma</button>
-        <button type="button" id="stopAlarm"> Detener alarma</button>
-        <audio src="js/alarmSound.mp4"></audio>
+        <div>
+          <button type="button" id="startClock" class="clock-btn"> Iniciar Reloj</button>
+          <button type="button" id="stopClock" class="clock-btn"> Detener Reloj</button>
+          <button type="button" id="startAlarm" class="clock-btn"> Iniciar alarma</button>
+          <button type="button" id="stopAlarm" class="clock-btn"> Detener alarma</button>
+          <!-- <audio src="Assets/alarmSound.mp4"></audio> -->
+        </div>
     </section>
     <section class="section" id="section-2">
         <h2>Sección 2</h2>
@@ -47,7 +48,7 @@
   </div>
   <div id="overlay" class="overlay">
     <aside class="panel-menu">
-      <a href="#section-1">Sección 1</a>
+      <a href="#section-1">Reloj digital y Alarma</a>
       <a href="#section-2">Sección 2</a>
       <a href="#section-3">Sección 3</a>
       <a href="#section-4">Sección 4</a>

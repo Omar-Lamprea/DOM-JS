@@ -26,7 +26,7 @@
 // documento, de esta forma se evita la propagación no deseada de eventos
 
 import hamburgerMenu from './hamburger_menu.js'
-import dijitalWatch from './reloj.js'
+import dijitalClock from './reloj.js'
 
 const d = document
 d.addEventListener('DOMContentLoaded',(e)=>{
@@ -35,5 +35,5 @@ d.addEventListener('DOMContentLoaded',(e)=>{
   
   
   // Exercise 2: clock, alarm
-  dijitalWatch()
+  dijitalClock()
 })
