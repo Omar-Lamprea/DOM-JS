@@ -25,15 +25,22 @@
 //nota: acá se usa la delegación de eventos, asignando el listener al 
 // documento, de esta forma se evita la propagación no deseada de eventos
 
-import hamburgerMenu from './hamburger_menu.js'
+import hamburgerMenu from './hamburger_menu.js' //importadas por default, solo uno por archivo.
 import dijitalClock from './reloj.js'
+import moveBall from './key_events.js'
+import{shortCuts} from './key_events.js' //importada normal, usando destructuración
 
 const d = document
 d.addEventListener('DOMContentLoaded',(e)=>{
   // Exercise 1: sections, menu
   hamburgerMenu('.menu-btn', '.overlay', '.panel-menu a')
-  
-  
   // Exercise 2: clock, alarm
   dijitalClock()
+  //Exercise 3: ball- events
+  moveBall()
+
+})
+  //Exercise 3: shortCuts, atajos del teclado:
+d.addEventListener('keydown', (e) =>{
+  shortCuts(e)
 })

@@ -14,6 +14,7 @@ body{
   margin:0;
   /* todo lo que se desborda en X se oculta */
   overflow-x: hidden;
+  /* overflow-y: hidden */
 }
 
 img{
@@ -138,4 +139,24 @@ img{
 .clock-btn:hover{
   box-shadow: 0px 0px 5px 1px blue;
   cursor: pointer;
+}
+
+
+/* key-events */
+.ball-container{
+  background-color: grey;
+  width: 90vw;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+.ball{
+  /* margin: auto; */
+  width: 100px;
+  height: 100px;
+  background-color: #fac500;
+  border-radius: 50%;
+  /* transition: all.8s; */
 }
