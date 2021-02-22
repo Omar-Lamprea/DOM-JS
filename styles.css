@@ -146,7 +146,7 @@ img{
 .ball-container{
   background-color: grey;
   width: 90vw;
-  height: 500px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;

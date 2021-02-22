@@ -29,6 +29,7 @@ import hamburgerMenu from './hamburger_menu.js' //importadas por default, solo u
 import dijitalClock from './reloj.js'
 import moveBall from './key_events.js'
 import{shortCuts} from './key_events.js' //importada normal, usando destructuración
+import countdownClock from './countdown.js'
 
 const d = document
 d.addEventListener('DOMContentLoaded',(e)=>{
@@ -38,7 +39,8 @@ d.addEventListener('DOMContentLoaded',(e)=>{
   dijitalClock()
   //Exercise 3: ball- events
   moveBall()
-
+  //Exercise 4: countdown
+  countdownClock('#countdown', '2021, 10, 06')
 })
   //Exercise 3: shortCuts, atajos del teclado:
 d.addEventListener('keydown', (e) =>{

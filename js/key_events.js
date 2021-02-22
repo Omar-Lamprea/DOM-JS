@@ -14,21 +14,29 @@ export default function moveBall(){
     // console.log(limitsBall)
     switch (e.keyCode) {
       case 37:
-        e.preventDefault()
-        if(limitsBall.left > limitsStage.left) x--
+        if(limitsBall.left > limitsStage.left){
+          e.preventDefault()
+          x--
+        } 
         break;
       case 39:
-        e.preventDefault()
-        if(limitsBall.right < limitsStage.right) x++
+        if(limitsBall.right < limitsStage.right){
+          e.preventDefault()
+          x++
+        } 
         break;
       case 38:
-        e.preventDefault()
-        if(limitsBall.top > limitsStage.top) y--
+        if(limitsBall.top > limitsStage.top){
+          e.preventDefault()
+          y--
+        }
 
         break;
       case 40:
-        e.preventDefault()
-        if(limitsBall.bottom < limitsStage.bottom) y++
+        if(limitsBall.bottom < limitsStage.bottom){
+          e.preventDefault()
+          y++
+        }
         break;
     }
     ball.style.transform = `translate(${x * 10}px,${y * 10}px)`
