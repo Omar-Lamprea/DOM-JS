@@ -76,17 +76,45 @@ img{
   justify-content: center;
   align-items: center;
   background-color: #fac500;
-  /* border-radius: 50%; */
+  outline: 0;
 }
-.menu-btn:hover{
-  /* background-color: #a88400;
-  color: white; */
+.menu-btnOk:hover{
+  background-color: #a88400;
 }
+
+
+.home-btn{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fac500;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: fixed;
+  bottom: 1vh;
+  right: calc(4.24rem + 1vw);
+  z-index: 999;
+  font-size: 40px;
+  outline: 0;
+  transition: all .3s ease-out;
+}
+.home-btn:hover{
+  background-color: #a88400;
+  color: white;
+}
+.hidden{
+  opacity: 0;
+  visibility: hidden;
+
+}
+
 
 .panel-menu{
   width: 100%;
 }
-
 .overlay{
   display: flex;
   flex-direction: column;
