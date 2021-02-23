@@ -76,9 +76,11 @@ img{
   justify-content: center;
   align-items: center;
   background-color: #fac500;
+  /* border-radius: 50%; */
 }
 .menu-btn:hover{
-  background-color: #a88400;
+  /* background-color: #a88400;
+  color: white; */
 }
 
 .panel-menu{
@@ -159,4 +161,11 @@ img{
   background-color: #fac500;
   border-radius: 50%;
   /* transition: all.8s; */
+}
+
+
+/* Countdown */
+.countdown{
+  font-size: 20px;
+  font-weight: bold;
 }

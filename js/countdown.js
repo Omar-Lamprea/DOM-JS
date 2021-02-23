@@ -16,6 +16,10 @@ export default function countdownClock(countdown, date){
   const hr = min * 60
   const day = hr * 24
 
+  let stopCountdown = 
+  setInterval(() => {
+    remaining()
+  }, 1000);
   
   function remaining(){
     const dateA = new Date()
@@ -31,10 +35,15 @@ export default function countdownClock(countdown, date){
     $hours.innerHTML = `${remainingHours} Horas `
     $minutes.innerHTML = `${remainingMinutes} minutos `
     $seconds.innerHTML = `${remainingSeconds} segundos `
-
+    
+    // console.log(duration)
+    if(remainingSeconds < 0){
+      // alert('feliz cumpleaños')
+      clearInterval(stopCountdown)
+      $clock.innerHTML = `<h3>Feliz Cumpleaños!🤓</h3>`
+    }
   }
+  
   remaining()
-  setInterval(() => {
-    remaining()
-  }, 1000);
+  
 }
