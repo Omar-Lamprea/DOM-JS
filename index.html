@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-dark>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" />
   <title>Ejercicios del DOM</title>
 </head>
-<body>
+<body data-dark>
   <main class="container-main">
     <header class="header">
       <h1>Ejercicios del DOM</h1>
@@ -26,13 +26,14 @@
     </section>
     <section class="section" id="section-2">
         <h1>Eventos del teclado</h1>
+        <h4>Usa las flechas del teclado para mover la pelota</h4>
         <div class="ball-container" id="ballContainer">
           <div class="ball" id="ball"></div>
         </div>
     </section>
     <section class="section" id="section-3">
         <h1>Countdown</h1>
-        <h3>Cuenta regresiva para tu cumpleaños</h3>
+        <h4>Cuenta regresiva para tu cumpleaños</h4>
         <div class="countdown" id="countdown">
           <span id="days">días </span><span id="hours">horas </span><span id="minutes">minutos </span><span id="seconds">segundos </span>
         </div>
@@ -56,6 +57,8 @@
     <button class="home-btn hidden" id="homeBtn">
       <!-- <img src="./Assets/increase.svg" alt=""> -->
       &#11014
+    </button>
+    <button class="theme" id="theme">
     </button>
   </div>
   <div id="overlay" class="overlay">

@@ -31,6 +31,7 @@ import moveBall from './key_events.js'
 import{shortCuts} from './key_events.js' //importada normal, usando destructuración
 import countdownClock from './countdown.js'
 import scrollTop from './scroll.js'
+import themes from './themes.js'
 
 const d = document
 d.addEventListener('DOMContentLoaded',(e)=>{
@@ -44,6 +45,8 @@ d.addEventListener('DOMContentLoaded',(e)=>{
   countdownClock('#countdown', '2021, 10, 06')
   //Excercise: scroll
   scrollTop()
+  //Excercise: themes
+  themes('#theme', 'dark-mode')
 })
   //Exercise 3: shortCuts, atajos del teclado:
 d.addEventListener('keydown', (e) =>{

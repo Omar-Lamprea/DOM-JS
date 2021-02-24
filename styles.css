@@ -83,33 +83,6 @@ img{
 }
 
 
-.home-btn{
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: #fac500;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  position: fixed;
-  bottom: 1vh;
-  right: calc(4.24rem + 1vw);
-  z-index: 999;
-  font-size: 40px;
-  outline: 0;
-  transition: all .3s ease-out;
-}
-.home-btn:hover{
-  background-color: #a88400;
-  color: white;
-}
-.hidden{
-  opacity: 0;
-  visibility: hidden;
-
-}
 
 
 .panel-menu{
@@ -196,4 +169,63 @@ img{
 .countdown{
   font-size: 20px;
   font-weight: bold;
+}
+
+
+/* scroll Button */
+.home-btn{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fac500;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: fixed;
+  bottom: 1vh;
+  right: calc(4.24rem + 1vw);
+  z-index: 999;
+  font-size: 40px;
+  outline: 0;
+  transition: all .3s ease-out;
+  cursor: pointer;
+}
+.home-btn:hover{
+  background-color: #a88400;
+  color: white;
+}
+.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+/* Theme Button */
+.theme{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fac500;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: 0;
+  position: fixed;
+  bottom: 1vh;
+  transition: all .3s ease-out;
+}
+.theme:hover{
+  background-color: #a88400;
+}
+.dark-mode{
+  background-color: #202020;
+  color: white
+}
+.light-mode{
+  background-color: #fff;
+ color: black
 }
