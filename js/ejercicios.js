@@ -45,10 +45,11 @@ d.addEventListener('DOMContentLoaded',(e)=>{
   countdownClock('#countdown', '2021, 10, 06')
   //Excercise: scroll
   scrollTop()
-  //Excercise: themes
-  themes('#theme', 'dark-mode')
 })
-  //Exercise 3: shortCuts, atajos del teclado:
+//Exercise 3: shortCuts, atajos del teclado:
 d.addEventListener('keydown', (e) =>{
   shortCuts(e)
 })
+
+//Excercise: themes
+themes('#theme', 'dark-mode')

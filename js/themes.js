@@ -21,7 +21,8 @@
 
 
 // dynamic form:
-const d = document
+const d = document,
+  ls = localStorage
 
 export default function themes(btn, classDark){
   const $themeBtn = d.querySelector(btn),
@@ -37,18 +38,36 @@ export default function themes(btn, classDark){
   const moon = '<img src="./Assets/night.svg" alt="theme" id="imgTheme">'
   const sun = '<img src="./Assets/sun.svg" alt="theme" id="imgTheme">'
 
+  const lightMode = () => {
+    $selectors.forEach((el) => el.classList.remove(classDark))
+    $themeBtn.innerHTML = moon
+    ls.setItem('theme', 'light')
+  }
+  const darkMode = () => {
+    $selectors.forEach((el) => el.classList.add(classDark))
+    $themeBtn.innerHTML = sun
+    ls.setItem('theme', 'dark')
+  }
+
   d.addEventListener('click', (e)=>{
     if(e.target.matches(btn) || e.target.matches(`${btn} *`)){
-      console.log($themeBtn.innerHTML)
+      // console.log($themeBtn.innerHTML)
       if($themeBtn.innerHTML === moon){
-        $selectors.forEach((el) => el.classList.add(classDark))
-        $themeBtn.innerHTML = sun
+        darkMode()
       }else{
-        $selectors.forEach((el) => el.classList.remove(classDark))
-        $themeBtn.innerHTML = moon
+        lightMode()
       }
     }
   })
+  
+  d.addEventListener('DOMContentLoaded', (e) => {
+    // console.log(ls.getItem('theme'))
 
+    if(ls.getItem('theme') === null) ls.setItem('theme', 'light')
 
+    if(ls.getItem('theme') === 'light') lightMode()
+
+    if(ls.getItem('theme') === 'dark') darkMode()
+
+  })
 }
