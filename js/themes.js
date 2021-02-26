@@ -60,6 +60,8 @@ export default function themes(btn, classDark){
     }
   })
   
+
+  //LocalStorage: para gardar el modo elegido 
   d.addEventListener('DOMContentLoaded', (e) => {
     // console.log(ls.getItem('theme'))
 
@@ -68,6 +70,5 @@ export default function themes(btn, classDark){
     if(ls.getItem('theme') === 'light') lightMode()
 
     if(ls.getItem('theme') === 'dark') darkMode()
-
   })
 }

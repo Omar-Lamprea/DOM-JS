@@ -49,6 +49,10 @@ img{
   min-height: 100vh;
   text-align: center;
 }
+.section a{
+  text-decoration: none;
+  color: red
+}
 
 .container-main{
   display: flex;
