@@ -1,21 +1,22 @@
 const d = document;
 const w = window;
 
-export default function responsiveTester(open, close,){
+export default function responsiveTester(form){
 
-  const webLink = d.getElementById('webLink')
-  const webWidth = d.getElementById('webWidth')
-  const webHeight = d.getElementById('webHeight')
+  const $form = d.getElementById(form)
+  // console.log($form)
   let openLink;
 
-  d.addEventListener('click', (e)=>{
+  d.addEventListener('submit', (e)=>{
     // console.log(e)
-    if(e.target.matches(open)){
-      // console.log(webWidth.value)
-      openLink = w.open(webLink.value, 'page1', `width=${webWidth.value}, height=${webHeight.value}`)
+    if(e.target === $form){
+      e.preventDefault()
+      openLink = w.open($form.linkUrl.value, 'tester', `width=${$form.widthLink.value}, height=${$form.heightLink.value}`)
     }
-    if(e.target.matches(close)){
-      openLink.close(webLink.value)
+  })
+  d.addEventListener('click', (e)=>{
+    if(e.target === $form.close){
+      openLink.close()
     }
   })
 }

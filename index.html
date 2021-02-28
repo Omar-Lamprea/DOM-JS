@@ -45,22 +45,15 @@
     </section>
     <section class="section" id="section-5">
         <h1>Responsive Tester</h1>
-        <form action="">
-          <label for="webLink">link</label>
-          <br>
-          <input type="text" id="webLink">
-          <br>
-          <label for="webWidth">Ancho</label>
-          <br>
-          <input type="text" id="webWidth">
-          <br>
-          <label for="webHeight">Alto</label>
-          <br>
-          <input type="text" id="webHeight">
-          <br>
-          <input type="button" name="" id="submitBtn" value="Probar">
-          <input type="button" name="" id="closeBtn" value="Cerrar">
-          
+        <form id="responsiveTester">
+          <input name="linkUrl" type="url" placeholder="ingresa una URL" required>
+          <br><br>
+          <input name="widthLink" type="text" placeholder="Ancho" required>
+          <br><br>
+          <input name="heightLink" type="text" placeholder="Alto" required>
+          <br><br>
+          <input type="submit" name="tester" id="submitBtn" value="Probar">
+          <input type="button" name="close" id="closeBtn" value="Cerrar">
         </form>
     </section>
   </main>

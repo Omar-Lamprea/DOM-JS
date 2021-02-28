@@ -36,10 +36,7 @@ d.addEventListener('DOMContentLoaded',(e)=>{
     // `<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d77895.71043505364!2d-75.68411095268995!3d4.5319371564338375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1614351040174!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`
   )
   //Excersice 5: 
-  responsiveTester(
-    '#submitBtn',
-    '#closeBtn',
-    )
+  responsiveTester('responsiveTester')
 })
 //Exercise 3: shortCuts, atajos del teclado:
 d.addEventListener('keydown', (e) =>{
