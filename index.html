@@ -30,12 +30,23 @@
         <div class="ball-container" id="ballContainer">
           <div class="ball" id="ball"></div>
         </div>
+        <p>Comandos personalizados:</p>
+        <span>
+          Alt + A = Alert /
+          Alt + C = confirm /
+          Alt + p = prompt
+        </span>
     </section>
     <section class="section" id="section-3">
         <h1>Countdown</h1>
         <h4>Cuenta regresiva para tu cumpleaños</h4>
         <div class="countdown" id="countdown">
-          <span id="days">días </span><span id="hours">horas </span><span id="minutes">minutos </span><span id="seconds">segundos </span>
+          <form id="form-date">
+            <input type="text" name="date" placeholder="año, mes, dia" required>
+            <input type="button" value="Calcular" name="dateBtn">
+          </form><br>
+          <span>Faltan:</span>
+          <span id="days"></span><span id="hours"></span><span id="minutes"></span><span id="seconds"></span>
         </div>
     </section>
     <section class="section" id="section-4">
@@ -85,3 +96,7 @@
   <script src="js/ejercicios.js" type="module"></script>
 </body>
 </html>
+
+
+
+
