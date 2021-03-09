@@ -15,6 +15,15 @@ export default function countdownClock(countdown, date){
   const hr = min * 60
   const day = hr * 24
   
+  d.addEventListener('click', (e)=>{
+    if(e.target === $formDate.dateBtn){
+      remaining()
+      let stopCountdown = 
+        setInterval(() => {
+          remaining()
+        }, 1000);
+    }
+  })
   
   
   function remaining(){
@@ -27,28 +36,21 @@ export default function countdownClock(countdown, date){
     const remainingMinutes = Math.floor((duration % hr) / min)
     const remainingSeconds = Math.floor((duration % min) / sec)
     
-
+    
     $days.innerHTML = `${remainingDays} días `
     $hours.innerHTML = `${remainingHours} Horas `
     $minutes.innerHTML = `${remainingMinutes} minutos `
     $seconds.innerHTML = `${remainingSeconds} segundos `
     
-    let stopCountdown = 
-      setInterval(() => {
-        remaining()
-      }, 1000);
-
+    
+    console.log(stopCountdown)
+    
     if(remainingSeconds < 0){
       // alert('feliz cumpleaños')
       clearInterval(stopCountdown)
       $clock.innerHTML = `<h3>Feliz Cumpleaños!🤓</h3>`
     }
   }
-
-  d.addEventListener('click', (e)=>{
-    if(e.target === $formDate.dateBtn){
-      remaining()
-    }
-  })
+  
 
 }
