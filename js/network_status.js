@@ -14,18 +14,20 @@ export default function networkStatus(){
   
   section.insertAdjacentElement('beforeend', messageStatus)
   
-  // setTimeout(() => {
-  //   section.removeChild(messageStatus)
-  // }, 2000);
+  const clearNetworkMessage = function (){
+    setTimeout(() => {
+    messageStatus.style.display = 'none'
+    }, 2000);
+  }
 
-  // setTimeout(()=> section.removeChild(messageStatus), 2000)
-  // console.log(messageStatus)
 
   w.addEventListener('online', (e)=> {
     console.log(n.onLine)
     messageStatus.classList.add('online')
     messageStatus.classList.remove('offline')
     messageStatus.innerHTML = `Conexión Reestablecida`
+    messageStatus.style.display = 'block'
+    clearNetworkMessage()
   })
 
   w.addEventListener('offline', (e)=> {
@@ -33,5 +35,7 @@ export default function networkStatus(){
     messageStatus.classList.add('offline')
     messageStatus.classList.remove('online')
     messageStatus.innerHTML = `Conexión Perdida`
+    messageStatus.style.display = 'block'
+    clearNetworkMessage()
   })
 }
