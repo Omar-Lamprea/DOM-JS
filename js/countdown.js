@@ -15,10 +15,12 @@ export default function countdownClock(countdown, date){
   const hr = min * 60
   const day = hr * 24
   
+  let stopCountdown;
+
   d.addEventListener('click', (e)=>{
     if(e.target === $formDate.dateBtn){
       remaining()
-      let stopCountdown = 
+      stopCountdown = 
         setInterval(() => {
           remaining()
         }, 1000);
