@@ -13,6 +13,7 @@ import userDeviceInfo from './deteccion_dispositivos.js'
 import network_status from './network_status.js'
 import webCam from './web_cam.js'
 import geo from './geolocation.js'
+import searchFilter from './search_filter.js'
 
 const d = document
 d.addEventListener('DOMContentLoaded',(e)=>{
@@ -47,7 +48,8 @@ d.addEventListener('DOMContentLoaded',(e)=>{
   webCam()
   //Exercise 9: geolocation
   geo()
-  
+  //Exercise 10: searchFilter
+  searchFilter('.card-filter', '.card')
 })
 
 

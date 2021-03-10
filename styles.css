@@ -254,3 +254,28 @@ img{
 .offline{
   background-color: red;
 }
+
+
+/* Filtros de búsqueda */
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr
+}
+
+.card{
+  /* display: inline-block; */
+  background-color: gray;
+  color: yellow;
+  transition: all 0.3s ease-out;
+}
+
+.card figcaption{
+  padding: 1rem;
+}
+
+.filter{
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  order: 1;
+}
