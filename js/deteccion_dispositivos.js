@@ -77,7 +77,7 @@ export default function userDeviceInfo(id){
 
   //redirecciones
   if(isMobile.android()){
-    window.location.href = 'https://omar-lamprea.github.io/OmarLamprea/'
+    // window.location.href = 'https://omar-lamprea.github.io/OmarLamprea/'
   }
 
 
