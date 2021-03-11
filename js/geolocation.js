@@ -19,7 +19,7 @@ export default function geo(){
     <a href="https://www.google.com/maps/@${coords.latitude},${coords.longitude},15z" target="_blank" rel="noopener">Ver en Maps</a>
     `
 
-    console.log(coords)
+    // console.log(coords)
   }
 
   const error = (err) =>{

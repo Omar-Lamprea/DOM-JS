@@ -60,19 +60,22 @@ export default function userDeviceInfo(id){
   `
   //contenido exclusivo
   if(isBrowser.chrome()){
-    $id.innerHTML += `<p><mark>Este conenido sólo se ve en Chrome</mark></p>`
+    $id.innerHTML += `<p><mark>Este contenido sólo se ve en Chrome</mark></p>`
   }
   if(isBrowser.firefox()){
-    $id.innerHTML += `<p><mark>Este conenido sólo se ve en Firefox</mark></p>`
+    $id.innerHTML += `<p><mark>Este contenido sólo se ve en Firefox</mark></p>`
   }
   if(isDesktop.linux()){
-    $id.innerHTML += `<p><mark>Este conenido sólo se ve en Linux</mark></p>`
+    $id.innerHTML += `<p><mark>Este contenido sólo se ve en Linux</mark></p>`
   }
   if(isDesktop.mac()){
-    $id.innerHTML += `<p><mark>Este conenido sólo se ve en Mac</mark></p>`
+    $id.innerHTML += `<p><mark>Este contenido sólo se ve en Mac</mark></p>`
   }
   if(isDesktop.windows()){
-    $id.innerHTML += `<p><mark>Este conenido sólo se ve en Windows</mark></p>`
+    $id.innerHTML += `<p><mark>Este contenido sólo se ve en Windows</mark></p>`
+  }
+  if(isMobile.android()){
+    $id.innerHTML += `<p><mark>Este contenido sólo se ve en Android</mark></p>`
   }
 
   //redirecciones

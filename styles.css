@@ -24,11 +24,6 @@ img{
 
 
 
-
-
-
-
-
 .header{
   position: sticky;
   top:0;
@@ -87,8 +82,6 @@ img{
 }
 
 
-
-
 .panel-menu{
   width: 100%;
 }
@@ -130,6 +123,8 @@ img{
 }
 
 
+
+
 /* dijital Clock */
 .clock{
   font-size: 20px;
@@ -148,6 +143,8 @@ img{
   box-shadow: 0px 0px 5px 1px blue;
   cursor: pointer;
 }
+
+
 
 
 /* key-events */
@@ -170,11 +167,15 @@ img{
 }
 
 
+
+
 /* Countdown */
 .countdown{
   font-size: 20px;
   font-weight: bold;
 }
+
+
 
 
 /* scroll Button */
@@ -207,6 +208,8 @@ img{
 }
 
 
+
+
 /* Theme Button */
 .theme{
   width: 4rem;
@@ -236,6 +239,8 @@ img{
 }
 
 
+
+
 /* network Status */
 .connection-message{
   /* padding: 10px; */
@@ -253,4 +258,58 @@ img{
 
 .offline{
   background-color: red;
+}
+
+
+
+/* Filtros de búsqueda */
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr
+}
+
+.card{
+  /* display: inline-block; */
+  background-color: gray;
+  color: yellow;
+  transition: all 0.3s ease-out;
+}
+
+.card figcaption{
+  padding: 1rem;
+}
+
+.filter{
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  order: 1;
+}
+
+
+
+/* Responsive Slider */
+.slider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.slider img{
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;
+}
+.controls-slider{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  /* margin: 0 3rem; */
+}
+.sliderBtn{
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #fac500bf;
 }
