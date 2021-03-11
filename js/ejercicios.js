@@ -15,6 +15,7 @@ import webCam from './web_cam.js'
 import geo from './geolocation.js'
 import searchFilter from './search_filter.js'
 import lottery from './sorteo.js'
+import slider from './responsive_slider.js'
 
 const d = document
 d.addEventListener('DOMContentLoaded',(e)=>{
@@ -53,6 +54,7 @@ d.addEventListener('DOMContentLoaded',(e)=>{
   searchFilter('.card-filter', '.card')
   //exercise 11: lottery
   lottery('sorteo', 'winnerBtn')
+  slider()
 })
 
 

@@ -20,21 +20,19 @@ export default function lottery(arrLg, winnerBtn){
 
   const ul = d.createElement('ul')
   
-  for(let i = 0; i < lgs.length; i++){
-    // console.log(i)
-  }
+  // for(let i = 0; i < lgs.length; i++){
+  //   // console.log(i)
+  // }
   
   playBtn.addEventListener('click', (e)=>{
-    const winner = (Math.floor(Math.random() * (lgs.length - 0) + 0))
+    const winner = (Math.floor(Math.random() * lgs.length))
     console.log(`posición: ${winner}, nombre: ${lgs[winner]}`)
-    alert(`el ganador es: ${lgs[winner]}`)
+    alert(`El ganador es: ${lgs[winner]}`)
   })
 
   lgs.forEach(el =>{
     // console.log(el)
     players.appendChild(ul).innerHTML += `<li>${el}</li>`
   })
-
-
 
 }
