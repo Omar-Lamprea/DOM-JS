@@ -5,7 +5,8 @@ export default function slider(){
     "./Assets/Slider/3dprint33.jpg",
     "./Assets/Slider/games1.jpg",
     "./Assets/Slider/life.jpg",
-    "./Assets/Slider/musica.jpg"
+    "./Assets/Slider/musica.jpg",
+    "http://placeimg.com/400/400/any"
   ]
 
   // console.log(sliderImages[1])
@@ -16,7 +17,7 @@ export default function slider(){
   let contador = 1
 
   function reset(){
-    if(contador === sliderImages.length || contador > sliderImages.length){
+    if(contador >= sliderImages.length){
       contador = 0
     }
   }
@@ -24,33 +25,29 @@ export default function slider(){
     setInterval(() => {
       $sliderContent.querySelector('img').setAttribute('src', sliderImages[contador])
       contador++
-      if(contador === sliderImages.length){
-        contador = 0
-      }
-    }, 3000);
+      reset()
+      // console.log(contador)
+    }, 5000);
 
-  console.log(contador)
+  // console.log(contador)
 
   document.addEventListener('click', (e)=>{
-  
     if(e.target.matches('#next')){
-      // console.log('adelante')
-      // console.log(contador)
       $sliderContent.querySelector('img').setAttribute('src', sliderImages[contador])
       contador++
       reset()
-      console.log(contador)
+      // console.log(contador)
     }
 
     if(e.target.matches('#back')){
-      console.log(contador)
       contador--
-      $sliderContent.querySelector('img').setAttribute('src', sliderImages[contador])
-      if(contador === 0 || contador > sliderImages.length){
+      if(contador <= 0){
         contador = sliderImages.length
       }
+      $sliderContent.querySelector('img').setAttribute('src', sliderImages[contador-1])
+      // contador--
+      // console.log(contador)
     }
-
   })
 
 }

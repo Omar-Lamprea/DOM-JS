@@ -30,6 +30,7 @@ img{
   padding: 1rem;
   background-color: rgba(250, 197, 0, 0.85);
   width: 100%;
+  z-index: 997;
 }
 .header h1{
   margin: 0%;
@@ -265,7 +266,7 @@ img{
 /* Filtros de búsqueda */
 .cards{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr
+  grid-template-columns: 1fr 1fr
 }
 
 .card{
@@ -294,22 +295,36 @@ img{
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  position: relative;
+  width: 80vw;
+  height: 80vh;
 }
 .slider img{
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 80vh;
   width: 100%;
   object-fit: cover;
+  transition: opacity 1s ease;
 }
 .controls-slider{
   display: flex;
   justify-content: space-between;
-  width: 85%;
-  /* margin: 0 3rem; */
+  width: 95%;
+  z-index: 995;
 }
 .sliderBtn{
-  width: 3rem;
-  height: 3rem;
+  outline: 0;
+  width: 4rem;
+  height: 4rem;
   border: none;
   border-radius: 50%;
   background-color: #fac500bf;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.sliderBtn:hover{
+  background-color: #fac500;
 }
