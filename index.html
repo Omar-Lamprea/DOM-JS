@@ -10,11 +10,11 @@
   <title>Ejercicios del DOM</title>
 </head>
 <body data-dark>
+  <header class="header">
+    <h1>Ejercicios del DOM</h1>
+  </header>
   <main class="container-main">
-    <header class="header">
-      <h1>Ejercicios del DOM</h1>
-    </header>
-    <section class="section" id="section-1">
+    <section class="section" data-scroll-spy id="section-1">
         <h1>Reloj digital y Alarma</h1>
         <div id="clock" class="clock"></div>
         <div>
@@ -24,7 +24,7 @@
           <button type="button" id="stopAlarm" class="clock-btn"> Detener alarma</button>
         </div>
     </section>
-    <section class="section" id="section-2">
+    <section class="section" data-scroll-spy id="section-2">
         <h1>Eventos del teclado</h1>
         <h4>Usa las flechas del teclado para mover la pelota</h4>
         <div class="ball-container" id="ballContainer">
@@ -37,7 +37,7 @@
           Alt + p = prompt
         </span>
     </section>
-    <section class="section" id="section-3">
+    <section class="section" data-scroll-spy data-scroll-spy id="section-3">
         <h1>Countdown</h1>
         <h4>Cuenta regresiva para tu cumpleaños</h4>
         <div class="countdown" id="countdown">
@@ -49,13 +49,13 @@
           <span id="days"></span><span id="hours"></span><span id="minutes"></span><span id="seconds"></span>
         </div>
     </section>
-    <section class="section" id="section-4">
+    <section class="section" data-scroll-spy id="section-4">
         <h1>Responsive con Javascript</h1>
         <p>cada elemento se carga en función del dispositivo en el que se abra esta página (versión desktop o mobile)</p>
         <div id="video"></div>
         <div id="gmaps"></div>
     </section>
-    <class class="section" id="section-5">
+    <class class="section" data-scroll-spy id="section-5">
         <h1>Responsive Tester</h1>
         <form id="responsiveTester">
           <input name="linkUrl" type="url" placeholder="ingresa una URL" required>
@@ -68,26 +68,26 @@
           <input type="button" name="close" id="closeBtn" value="Cerrar">
         </form>
     </class>
-    <section class="section" id="section-6">
+    <section class="section" data-scroll-spy id="section-6">
       <h1>Detección de dispositivos (User Agent)</h1>
       <div id="user-device"></div>
     </section>
-    <section class="section" id="section-7">
+    <section class="section" data-scroll-spy id="section-7">
       <h1>Detección de conexión</h1>
       <!-- <div class="connection-message"></div> -->
     </section>
-    <section class="section" id="section-8">
+    <section class="section" data-scroll-spy id="section-8">
       <h1>Detección de la Cámara Web</h1>
       <div class="web-Cam" id="webContainer">
         <br>
         <button id="initCam">Abrir Cámara</button>
       </div>
     </section>
-    <section class="section" id="section-9">
+    <section class="section" data-scroll-spy id="section-9">
       <h1>Geolocalización</h1>
       <div class="geo" id="geo"></div>
     </section>
-    <section class="section" id="section-10">
+    <section class="section" data-scroll-spy id="section-10">
       <h1>Filtros de búsqueda</h1>
       <form>
         <input type="search" name="filter" id="searchImgs" class="card-filter" placeholder="Buscar...">
@@ -119,12 +119,12 @@
         </figure>
       </article>
     </section>
-    <section class="section" id="section-11">
+    <section class="section" data-scroll-spy id="section-11">
       <h1>Sorteo Digital</h1>
       <div class="sorteo" id="sorteo"></div>
       <input type="button" value="Obtener Ganador" id="winnerBtn">
     </section>
-    <section class="section" id="section-12">
+    <section class="section" data-scroll-spy id="section-12">
       <h1>Responsive Slider</h1>
       <div class="slider" id="sliderContent">
         <figure>
@@ -136,13 +136,16 @@
         </div>
       </div>
     </section>
-    <section class="section" id="section-13">
-      <h1>Sección 13</h1>
+    <section class="section" data-scroll-spy id="section-13">
+      <h1>Video Inteligente</h1>
+      <video id="smartVideo" height="500" controls muted>
+        <source src="./Assets/mascotas.mp4">
+      </video>
     </section>
-    <section class="section" id="section-14">
+    <section class="section" data-scroll-spy id="section-14">
       <h1>Sección 14</h1>
     </section>
-    <section class="section" id="section-15">
+    <section class="section" data-scroll-spy id="section-15">
       <h1>Sección 15</h1>
     </section>
   </main>
@@ -164,21 +167,21 @@
   </div>
   <div id="overlay" class="overlay">
     <aside class="panel-menu">
-      <a href="#section-1">Reloj digital y Alarma</a>
-      <a href="#section-2">Eventos del teclado</a>
-      <a href="#section-3">Countdown</a>
-      <a href="#section-4">Responsive con Javascript</a>
-      <a href="#section-5">Responsive Tester</a>
-      <a href="#section-6">Detección de dispositivos (User Agent)</a>
-      <a href="#section-7">Detección de conexión</a>
-      <a href="#section-8">Detección de la Cámara Web</a>
-      <a href="#section-9">Geolocalización</a>
-      <a href="#section-10">Filtros de búsqueda</a>
-      <a href="#section-11">Sorteo Digital</a>
-      <a href="#section-12">Responsive Slider</a>
-      <a href="#section-13">sección 13</a>
-      <a href="#section-14">sección 14</a>
-      <a href="#section-15">sección 15</a>
+      <a href="#section-1" data-scroll-spy>Reloj digital y Alarma</a>
+      <a href="#section-2" data-scroll-spy>Eventos del teclado</a>
+      <a href="#section-3" data-scroll-spy>Countdown</a>
+      <a href="#section-4" data-scroll-spy>Responsive con Javascript</a>
+      <a href="#section-5" data-scroll-spy>Responsive Tester</a>
+      <a href="#section-6" data-scroll-spy>Detección de dispositivos</a>
+      <a href="#section-7" data-scroll-spy>Detección de conexión</a>
+      <a href="#section-8" data-scroll-spy>Detección de la Cámara Web</a>
+      <a href="#section-9" data-scroll-spy>Geolocalización</a>
+      <a href="#section-10" data-scroll-spy>Filtros de búsqueda</a>
+      <a href="#section-11" data-scroll-spy>Sorteo Digital</a>
+      <a href="#section-12" data-scroll-spy>Responsive Slider</a>
+      <a href="#section-13" data-scroll-spy>Video Inteligente</a>
+      <a href="#section-14" data-scroll-spy>sección 14</a>
+      <a href="#section-15" data-scroll-spy>sección 15</a>
     </aside>
   </div>
   <script src="js/ejercicios.js" type="module"></script>

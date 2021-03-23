@@ -225,6 +225,7 @@ img{
   outline: 0;
   position: fixed;
   bottom: 1vh;
+  left: 1vh;
   transition: all .3s ease-out;
 }
 .theme:hover{
@@ -327,4 +328,71 @@ img{
 }
 .sliderBtn:hover{
   background-color: #fac500;
+}
+
+
+
+/* version descktop */
+@media screen and (min-width: 1024px){
+  body{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 4rem auto;
+    grid-template-areas:
+    "header header"
+    "main   panel";
+  }
+
+  .header{
+    grid-area: header;
+  }
+
+  .container-main{
+    grid-area: main;
+  }
+
+  .overlay{
+    grid-area: panel;
+    position: sticky;
+    top: 4rem;
+    transform: translate(0,0);
+    opacity: 1;
+    background-color: #000000ab;
+    justify-content: flex-start;
+    align-self: start;
+  }
+
+  .panel-menu{
+    height: 100vh;
+    justify-content: start;
+  }
+
+  .panel-menu a{
+    /* margin-left: -10px; */
+    font-size: 1rem;
+    /* justify-content: flex-end; */
+    padding: .60rem 0;
+    min-height: 40px;
+  }
+
+  .panel-menu a:hover,
+  .panel-menu a.active{
+    background-color: #fac500;
+    color:black
+  }
+
+  .ball-container{
+    width: 60vw;
+  }
+  .slider{
+    width: 60vw;
+  }
+  .home-btn{
+    right: initial;
+    left: calc(4.24rem + 1vw)
+  }
+  .menu-btnOk{
+    display: none !important;
+  }
+
 }

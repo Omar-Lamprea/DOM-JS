@@ -16,6 +16,8 @@ import geo from './geolocation.js'
 import searchFilter from './search_filter.js'
 import lottery from './sorteo.js'
 import slider from './responsive_slider.js'
+import scrollSpy from './scroll_spy.js'
+import smartVideo from './smart_video.js'
 
 const d = document
 d.addEventListener('DOMContentLoaded',(e)=>{
@@ -34,7 +36,7 @@ d.addEventListener('DOMContentLoaded',(e)=>{
     'video',
     '(min-width: 600px)',
     `<a target="_blank" href="https://www.youtube.com/watch?v=Sp4ELDWoIsk&feature=emb_title" blank_>Ver Video</a>`,
-    // `<iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/Sp4ELDWoIsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+    // `<iframe width="560" height="315" src="https://www.youtube.com/embed/zGi4P2cIs4I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
   )
   jsResponsive(
     'gmaps',
@@ -54,7 +56,12 @@ d.addEventListener('DOMContentLoaded',(e)=>{
   searchFilter('.card-filter', '.card')
   //exercise 11: lottery
   lottery('sorteo', 'winnerBtn')
+  //Exercise 12: slider
   slider()
+  //Exercise 13: Scroll Spy (intersection Observer)
+  scrollSpy()
+  //Exercise 14: video inteligente
+  smartVideo()
 })
 
 
