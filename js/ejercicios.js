@@ -17,6 +17,7 @@ import searchFilter from './search_filter.js'
 import lottery from './sorteo.js'
 import slider from './responsive_slider.js'
 import scrollSpy from './scroll_spy.js'
+import smartVideo from './smart_video.js'
 
 const d = document
 d.addEventListener('DOMContentLoaded',(e)=>{
@@ -59,6 +60,8 @@ d.addEventListener('DOMContentLoaded',(e)=>{
   slider()
   //Exercise 13: Scroll Spy (intersection Observer)
   scrollSpy()
+  //Exercise 14: video inteligente
+  smartVideo()
 })
 
 
