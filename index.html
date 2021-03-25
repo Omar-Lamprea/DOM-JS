@@ -15,7 +15,7 @@
   </header>
   <main class="container-main">
     <section class="section" data-scroll-spy id="section-1">
-        <h1>Reloj digital y Alarma</h1>
+        <h2>Reloj digital y Alarma</h2>
         <div id="clock" class="clock"></div>
         <div>
           <button type="button" id="startClock" class="clock-btn"> Iniciar Reloj</button>
@@ -25,7 +25,7 @@
         </div>
     </section>
     <section class="section" data-scroll-spy id="section-2">
-        <h1>Eventos del teclado</h1>
+        <h2>Eventos del teclado</h2>
         <h4>Usa las flechas del teclado para mover la pelota</h4>
         <div class="ball-container" id="ballContainer">
           <div class="ball" id="ball"></div>
@@ -38,7 +38,7 @@
         </span>
     </section>
     <section class="section" data-scroll-spy data-scroll-spy id="section-3">
-        <h1>Countdown</h1>
+        <h2>Countdown</h2>
         <h4>Cuenta regresiva para tu cumpleaños</h4>
         <div class="countdown" id="countdown">
           <form id="form-date">
@@ -50,13 +50,13 @@
         </div>
     </section>
     <section class="section" data-scroll-spy id="section-4">
-        <h1>Responsive con Javascript</h1>
+        <h2>Responsive con Javascript</h2>
         <p>cada elemento se carga en función del dispositivo en el que se abra esta página (versión desktop o mobile)</p>
         <div id="video"></div>
         <div id="gmaps"></div>
     </section>
     <class class="section" data-scroll-spy id="section-5">
-        <h1>Responsive Tester</h1>
+        <h2>Responsive Tester</h2>
         <form id="responsiveTester">
           <input name="linkUrl" type="url" placeholder="ingresa una URL" required>
           <br><br>
@@ -69,26 +69,26 @@
         </form>
     </class>
     <section class="section" data-scroll-spy id="section-6">
-      <h1>Detección de dispositivos (User Agent)</h1>
+      <h2>Detección de dispositivos (User Agent)</h2>
       <div id="user-device"></div>
     </section>
     <section class="section" data-scroll-spy id="section-7">
-      <h1>Detección de conexión</h1>
+      <h2>Detección de conexión</h2>
       <!-- <div class="connection-message"></div> -->
     </section>
     <section class="section" data-scroll-spy id="section-8">
-      <h1>Detección de la Cámara Web</h1>
+      <h2>Detección de la Cámara Web</h2>
       <div class="web-Cam" id="webContainer">
         <br>
         <button id="initCam">Abrir Cámara</button>
       </div>
     </section>
     <section class="section" data-scroll-spy id="section-9">
-      <h1>Geolocalización</h1>
+      <h2>Geolocalización</h2>
       <div class="geo" id="geo"></div>
     </section>
     <section class="section" data-scroll-spy id="section-10">
-      <h1>Filtros de búsqueda</h1>
+      <h2>Filtros de búsqueda</h2>
       <form>
         <input type="search" name="filter" id="searchImgs" class="card-filter" placeholder="Buscar...">
       </form>
@@ -120,12 +120,12 @@
       </article>
     </section>
     <section class="section" data-scroll-spy id="section-11">
-      <h1>Sorteo Digital</h1>
+      <h2>Sorteo Digital</h2>
       <div class="sorteo" id="sorteo"></div>
       <input type="button" value="Obtener Ganador" id="winnerBtn">
     </section>
     <section class="section" data-scroll-spy id="section-12">
-      <h1>Responsive Slider</h1>
+      <h2>Responsive Slider</h2>
       <div class="slider" id="sliderContent">
         <figure>
           <img src="./Assets/Slider/dev.jpeg" alt="img">
@@ -137,16 +137,30 @@
       </div>
     </section>
     <section class="section" data-scroll-spy id="section-13">
-      <h1>Video Inteligente</h1>
-      <video id="smartVideo" height="500" controls muted>
+      <h2>Video Inteligente</h2>
+      <video id="smartVideo" height="500" controls muted loop>
         <source src="./Assets/mascotas.mp4">
       </video>
     </section>
     <section class="section" data-scroll-spy id="section-14">
-      <h1>Sección 14</h1>
+      <h2>Formulario de Contacto (Validaciones)</h2>
+      <form class="contact-form">
+        <legend>Envíanos tus Comentarios</legend>
+        <input type="text" placeholder="Nombre" name="name" title="El Nombre sólo acepta letras y espacios en blanco" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+        <input type="email" placeholder="E-mail" name="email" title="Email incorrecto" required pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+        <input type="text" placeholder="Asunto" name="subject" title="El asunto es requerido" required>
+        <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-patterm="^.{1,255}$" title="Máximo 255 caracteres" required></textarea>
+        <input type="submit" name="send">
+      </form>
+      <div class="contact-form-loader none">
+        <img src="./Assets/oval.svg" alt="loading">
+      </div>
+      <div class="contact-form-response none">
+        <p>Los datos han sido enviados</p>
+      </div>
     </section>
     <section class="section" data-scroll-spy id="section-15">
-      <h1>Sección 15</h1>
+      <h2>Sección 15</h2>
     </section>
   </main>
   <div class="menu-btnOk">
@@ -180,7 +194,7 @@
       <a href="#section-11" data-scroll-spy>Sorteo Digital</a>
       <a href="#section-12" data-scroll-spy>Responsive Slider</a>
       <a href="#section-13" data-scroll-spy>Video Inteligente</a>
-      <a href="#section-14" data-scroll-spy>sección 14</a>
+      <a href="#section-14" data-scroll-spy>Formulario de Contacto (Validaciones)</a>
       <a href="#section-15" data-scroll-spy>sección 15</a>
     </aside>
   </div>

@@ -110,12 +110,12 @@ img{
 .overlay a{
   display: flex;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 30px;
   color: #fac500;
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 102px;
+  min-height: 60px;
   transition: all .3s ease;
 }
 .overlay a:hover{
@@ -244,10 +244,10 @@ img{
 
 
 /* network Status */
-.connection-message{
-  /* padding: 10px; */
-  /* border: solid white 1px; */
-}
+/* .connection-message{
+  padding: 10px;
+  border: solid white 1px;
+} */
 .online, .offline{
   position: sticky;
   top: 0;
@@ -329,6 +329,90 @@ img{
 .sliderBtn:hover{
   background-color: #fac500;
 }
+
+
+
+
+
+
+/* Formulario de contacto */
+.contact-form{
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44336;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.contact-form > *{
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 95%;
+}
+.contact-form textarea{
+  resize: none;
+}
+
+.contact-form legend,
+.contact-form-response{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea{
+font-size: 1rem;
+font-family: sans-serif;
+}
+
+.contact-form input[type="submit"]{
+  width: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form *::placeholder{
+  color: #000;
+}
+
+.contact-form [required]:valid{
+  border: thin solid var(--form-ok-color)
+}
+.contact-form [required]:invalid{
+  border: thin solid var(--form-error-color)
+}
+
+.contact-form-error{
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: var(--form-error-color);
+  color: white;
+  transition: all 800ms ease;
+}
+
+.contact-form-error.is-active{
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+  display: none;
+}
+
+@keyframes show-message{
+  0%{
+    visibility: hidden;
+    opacity: 0;
+  }
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
 
 
 
