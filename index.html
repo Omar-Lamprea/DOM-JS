@@ -144,12 +144,12 @@
     </section>
     <section class="section" data-scroll-spy id="section-14">
       <h2>Formulario de Contacto (Validaciones)</h2>
-      <form class="contact-form">
+      <form class="contact-form" action="https://formsubmit.co/lampreaomar@gmail.com" target="_blank" method="POST">
         <legend>Envíanos tus Comentarios</legend>
         <input type="text" placeholder="Nombre" name="name" title="El Nombre sólo acepta letras y espacios en blanco" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
         <input type="email" placeholder="E-mail" name="email" title="Email incorrecto" required pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
         <input type="text" placeholder="Asunto" name="subject" title="El asunto es requerido" required>
-        <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-patterm="^.{1,255}$" title="Máximo 255 caracteres" required></textarea>
+        <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" title="Máximo 255 caracteres" required></textarea>
         <input type="submit" name="send">
       </form>
       <div class="contact-form-loader none">

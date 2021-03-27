@@ -18,6 +18,7 @@ import lottery from './sorteo.js'
 import slider from './responsive_slider.js'
 import scrollSpy from './scroll_spy.js'
 import smartVideo from './smart_video.js'
+import contactFormValidations from './validaciones_formulario.js'
 
 const d = document
 d.addEventListener('DOMContentLoaded',(e)=>{
@@ -62,6 +63,8 @@ d.addEventListener('DOMContentLoaded',(e)=>{
   scrollSpy()
   //Exercise 14: video inteligente
   smartVideo()
+  //Exercise 15: validacion de formulario
+  contactFormValidations()
 })
 
 
