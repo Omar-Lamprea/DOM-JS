@@ -19,6 +19,7 @@ import slider from './responsive_slider.js'
 import scrollSpy from './scroll_spy.js'
 import smartVideo from './smart_video.js'
 import contactFormValidations from './validaciones_formulario.js'
+import speechReader from './narrador.js'
 
 const d = document
 d.addEventListener('DOMContentLoaded',(e)=>{
@@ -78,3 +79,7 @@ themes('#theme', 'dark-mode')
 
 //Exercise 7: internet connection
 network_status()
+
+
+//Exercise 16:Narrador
+speechReader()
