@@ -29,7 +29,7 @@ img{
   top:0;
   padding: 1rem;
   background-color: rgba(250, 197, 0, 0.85);
-  width: 100%;
+  /* width: 100%; */
   z-index: 997;
 }
 .header h1{
@@ -37,12 +37,22 @@ img{
   text-align: center;
 }
 
+.container-main{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
 .section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
   padding: 2rem;
   padding-top: 4rem;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 100vh;
+  margin: 0 auto;
+  min-height: 60vh;
   text-align: center;
 }
 .section a{
@@ -50,12 +60,6 @@ img{
   color: red
 }
 
-.container-main{
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
 
 /* .container-menu{
   display: flex;
@@ -102,6 +106,7 @@ img{
   opacity: 0;
   transition: transform.4s ease, opacity 0.3s ease;
   transform: translate(-100%,0);
+  z-index: 998;
 }
 .overlay.is-active{
   transform: translate(0,0);
@@ -151,7 +156,7 @@ img{
 /* key-events */
 .ball-container{
   background-color: grey;
-  width: 90vw;
+  width: 80vw;
   height: 400px;
   display: flex;
   justify-content: center;
@@ -445,6 +450,10 @@ font-family: sans-serif;
     grid-area: main;
   }
 
+  .header h1{
+    padding-right: 20%;
+  }
+
   .overlay{
     grid-area: panel;
     position: sticky;
@@ -466,7 +475,7 @@ font-family: sans-serif;
     font-size: 1rem;
     /* justify-content: flex-end; */
     padding: .60rem 0;
-    min-height: 40px;
+    min-height: 4%;
   }
 
   .panel-menu a:hover,
@@ -488,5 +497,19 @@ font-family: sans-serif;
   .menu-btnOk{
     display: none !important;
   }
+}
 
+@media screen and (max-width: 420px){
+  .cards{
+    display: block;
+  }
+
+  .speech-select, .speech-area{
+    width: 80vw;
+  }
+
+  .overlay a{
+    font-size: 20px;
+    min-height: 40px;
+  }
 }

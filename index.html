@@ -55,7 +55,7 @@
         <div id="video"></div>
         <div id="gmaps"></div>
     </section>
-    <class class="section" data-scroll-spy id="section-5">
+    <section class="section" data-scroll-spy id="section-5">
         <h2>Responsive Tester</h2>
         <form id="responsiveTester">
           <input name="linkUrl" type="url" placeholder="ingresa una URL" required>
@@ -67,7 +67,7 @@
           <input type="submit" name="tester" id="submitBtn" value="Probar">
           <input type="button" name="close" id="closeBtn" value="Cerrar">
         </form>
-    </class>
+    </section>
     <section class="section" data-scroll-spy id="section-6">
       <h2>Detección de dispositivos (User Agent)</h2>
       <div id="user-device"></div>
@@ -161,15 +161,17 @@
     </section>
     <section class="section" data-scroll-spy id="section-15">
       <h2>Narrador</h2>
-      <select id="speech-select">
-        <option value="">--- elige Una Voz</option>
-      </select>
-      <br>
-      <br>
-      <textarea id="speech-area" cols="50" rows="5" placeholder="Ingresa un Texto para leerlo"></textarea>
-      <br>
-      <br>
-      <button id="speech-btn">Leer Texto</button>
+      <div class="speech-container">
+        <select id="speech-select" class="speech-select">
+          <option value="">--- elige Una Voz</option>
+        </select>
+        <br>
+        <br>
+        <textarea class="speech-area" id="speech-area" cols="50" rows="5" placeholder="Ingresa un Texto para leerlo"></textarea>
+        <br>
+        <br>
+        <button id="speech-btn">Leer Texto</button>
+      </div>
     </section>
   </main>
   <div class="menu-btnOk">

@@ -27,7 +27,7 @@ export default function scrollSpy(){
   const observer = new IntersectionObserver(cb, {
     //root: 
     // rootMargin: '-250px',
-   threshold: [0.5, 0.75]
+   threshold: [0.75, 1]
   })
   // console.log(observer)
 
