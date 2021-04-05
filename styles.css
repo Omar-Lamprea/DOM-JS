@@ -28,7 +28,7 @@ img{
   position: sticky;
   top:0;
   padding: 1rem;
-  background-color: rgba(250, 197, 0, 0.85);
+  background-color: rgb(250 197 0 / 92%);
   /* width: 100%; */
   z-index: 997;
 }
@@ -44,6 +44,11 @@ img{
   justify-content: center;
   align-items: center;
 }
+
+.blur{
+  filter: blur(2px);
+}
+
 .section{
   display: flex;
   justify-content: center;
@@ -94,7 +99,7 @@ img{
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  background-color: #00000054;
+  background-color: #00000096;
   position: fixed;
   left: 0;
   right: 0;
@@ -116,7 +121,7 @@ img{
   display: flex;
   text-decoration: none;
   font-size: 30px;
-  color: #fac500;
+  color: #fff;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -232,6 +237,7 @@ img{
   bottom: 1vh;
   left: 1vh;
   transition: all .3s ease-out;
+  z-index: 997;
 }
 .theme:hover{
   background-color: #a88400;
@@ -435,15 +441,16 @@ font-family: sans-serif;
 @media screen and (min-width: 1024px){
   body{
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: 4rem auto;
     grid-template-areas:
     "header header"
-    "main   panel";
+    "panel  main";
   }
 
   .header{
     grid-area: header;
+    z-index: 1000;
   }
 
   .container-main{
@@ -451,7 +458,7 @@ font-family: sans-serif;
   }
 
   .header h1{
-    padding-right: 20%;
+    padding-left: 20%;
   }
 
   .overlay{
@@ -460,7 +467,7 @@ font-family: sans-serif;
     top: 4rem;
     transform: translate(0,0);
     opacity: 1;
-    background-color: #000000ab;
+    background-color: #181818;
     justify-content: flex-start;
     align-self: start;
   }
@@ -491,11 +498,15 @@ font-family: sans-serif;
     width: 60vw;
   }
   .home-btn{
-    right: initial;
-    left: calc(4.24rem + 1vw)
+    right: calc(4.24rem + 1vw);
   }
   .menu-btnOk{
     display: none !important;
+  }
+  .theme{
+    bottom: 1vh;
+    right: 1vh;
+    left: initial;
   }
 }
 

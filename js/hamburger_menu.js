@@ -33,11 +33,13 @@ export default function hamburgerMenu(menuBtn, panelMenu, menuLinkA){
     if(e.target.matches(menuBtn) || e.target.matches(`${menuBtn} *`)){
       d.querySelector(panelMenu).classList.toggle('is-active')
       d.querySelector(menuBtn).classList.toggle('is-active')
+      d.querySelector('.container-main').classList.toggle('blur')
     }
 
     if(e.target.matches(menuLinkA)){
       d.querySelector(panelMenu).classList.remove('is-active')
       d.querySelector(menuBtn).classList.remove('is-active')
+      d.querySelector('.container-main').classList.remove('blur')
     }
   })
 }
